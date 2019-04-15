@@ -2,49 +2,34 @@
 
     module.task6 = function () {
 
-        var value1 = prompt("Enter a row length");
+        var value1 = prompt("Enter a square length");
         var value2 = prompt("Enter a min value of square");
-        var arr = [];
         var resultArr = [];
-        var rowLength = parseFloat(value1).toFixed(0);
-        var minSquare = parseFloat(value2).toFixed(0);
+        var rowLength = +parseFloat(value1).toFixed(0);
+        var minSquare = +parseFloat(value2).toFixed(0);
+        var sqrt = +Math.sqrt(minSquare).toFixed(0);
 
-        function getRandom(n, m) {
+        function calcSequence(len, sqrt) {
 
-            if (validationData(n, m)) {
+            if (validationData(len, sqrt)) {
 
-                for (var i = 0; i < n; i++) {
-                    arr.push((Math.random() * 10).toFixed(0));
-                };
-            } else {
-                console.log('{status: "failed", reason: "you have entered incorrect data"}');
-            };
+                for (var i = sqrt; i < len + sqrt; i++) {
+                    resultArr.push(i);
+                }
+                return resultArr.join(',');
+                
+            } else return;
         };
 
-
-        function compareNumbers(arr, min) {
-
-            for (var i = 0; i < arr.length; i++) {
-                if ((arr[i] * arr[i]) > min) {
-                    resultArr.push(arr[i]);
-                };
-            };
-        };
-
-        function validationData(rowLength, minSquare) {
-
-            if ((rowLength && minSquare) && (rowLength > 0 && minSquare > 0)) {
-
+        function validationData(value1, value2) {
+           if ((value1 && value2) && (value1 > 0 && value2 > 0)) {
                 return true;
-            };
-            return false;
+           } else {
+                console.log('{status: "failed", reason: "you have entered incorrect data"}');
+                return false;
+           };
         };
 
-        getRandom(rowLength, minSquare);
-        compareNumbers(arr, minSquare);
-
-        var result = resultArr.join(',');
-
-        console.log(result);
+        console.log(calcSequence(rowLength, sqrt));
     };
 }());

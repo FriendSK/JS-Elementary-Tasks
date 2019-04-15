@@ -17,30 +17,30 @@
                 for (var i = 0; i < height; i++) {
                     document.write('<tr>');
 
-                    for (var j = 0; j < width; j++)
+                    for (var j = 0; j < width; j++) {
 
                         if (i % 2 === 0) {
                             document.write('<td>' + String(sym) + '</td>');
-
                         } else {
                             document.write('<td>' + '&nbsp' + String(sym) + '</td>');
-                        }
+                        };
+                    };
                     document.write('</tr>');
                 };
-            } else {
-                console.log('{status: "failed", reason: "you have entered incorrect data"}');
-            };
+            } else return;
         };
 
-        function validationData(height, width) {
+        function validationData(value1, value2) {
 
-            if ((height && width) && (height > 0 && width > 0)) {
-
+            if ((value1 && width) && (value2 > 0 && value2 > 0)) {
                 return true;
-            }
-            return false;
+            } else {
+                console.log('{status: "failed", reason: "you have entered incorrect data"}');
+                return false;
+            };
         };
 
         makeChessboard(height, width);
     };
 }());
+
