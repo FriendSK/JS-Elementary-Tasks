@@ -18,7 +18,6 @@
             if (validationData(min, max)) {
                 let softMethodCount = 0;
                 let complicatedMethodCount = 0;
-                var obj = {};
 
                 for (var i = min; i <= max; i++) {
                     var arrData = dataToArray(i);
@@ -29,14 +28,14 @@
 
                 if (softMethodCount > complicatedMethodCount) {
 
-                    return obg = {
+                    return obj = {
                         method: 'Soft method has won!',
                         softMethod: softMethodCount,
                         complicatedMethod: complicatedMethodCount,
                     };
                 } else if (softMethodCount < complicatedMethodCount) {
 
-                    return obg = {
+                    return obj = {
                         method: 'Complicated method has won!',
                         softMethod: softMethodCount,
                         complicatedMethod: complicatedMethodCount,
@@ -53,7 +52,7 @@
             var str = value.toString();
 
             for (var i = 0; i < str.length; i++) {
-                arr[arr.length - i - 1] = str[str.length - i - 1]
+                arr[i] = str[i]
 
             };
             return arr;
