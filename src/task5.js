@@ -97,8 +97,8 @@
                 console.log('{status: "failed", reason: "you have entered incorrect data"}');
                 return false;
             };
+        };
 
-        }
         var res = processingTickets(value1, value2);
         console.log(res);
     };
