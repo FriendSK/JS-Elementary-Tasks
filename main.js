@@ -6,7 +6,7 @@ function runTask1() {
 function runTask2() {
     module.task2();
 }
-runTask2();
+// runTask2();
 
 function runTask3() {
     module.task3();
@@ -18,7 +18,7 @@ function runTask4() {
 }
 // runTask4();
 
-function runTask5() {
+function runTask5 () {
     module.task5();
 }
 // runTask5();

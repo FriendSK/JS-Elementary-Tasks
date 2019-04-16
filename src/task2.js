@@ -4,10 +4,10 @@
 
         var env1 = {};
         var env2 = {};
-        var firstSide = prompt("Enter the left side of the first envelope");
-        var secondSide = prompt("Enter the right side of the first envelope");
-        var thirdSide = prompt("Enter the left side of the second envelope");
-        var fourthSide = prompt("Enter the right side of the second envelope");
+        var firstSide = prompt("Enter the left side of the first envelope").trim();
+        var secondSide = prompt("Enter the right side of the first envelope").trim();
+        var thirdSide = prompt("Enter the left side of the second envelope").trim();
+        var fourthSide = prompt("Enter the right side of the second envelope").trim();
         env1.h = parseFloat(firstSide);
         env1.w = parseFloat(secondSide);
         env2.h = parseFloat(thirdSide);

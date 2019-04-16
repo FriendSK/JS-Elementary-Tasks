@@ -2,8 +2,8 @@
 
     module.task6 = function () {
 
-        var value1 = prompt("Enter a square length");
-        var value2 = prompt("Enter a min value of square");
+        var value1 = prompt("Enter a square length").trim();
+        var value2 = prompt("Enter a min value of square").trim();
         var resultArr = [];
         var rowLength = +parseFloat(value1).toFixed(0);
         var minSquare = +parseFloat(value2).toFixed(0);
@@ -17,17 +17,17 @@
                     resultArr.push(i);
                 }
                 return resultArr.join(',');
-                
+
             } else return;
         };
 
         function validationData(value1, value2) {
-           if ((value1 && value2) && (value1 > 0 && value2 > 0)) {
+            if ((value1 && value2) && (value1 > 0 && value2 > 0)) {
                 return true;
-           } else {
+            } else {
                 console.log('{status: "failed", reason: "you have entered incorrect data"}');
                 return false;
-           };
+            };
         };
 
         console.log(calcSequence(rowLength, sqrt));

@@ -2,7 +2,7 @@
 
   module.task7 = function () {
 
-    var inputValue = prompt("Enter a  length of sequence");
+    var inputValue = prompt("Enter a  length of sequence").trim();
     var lengthValue = parseFloat(inputValue).toFixed(0);
     var context = {
         length: lengthValue
