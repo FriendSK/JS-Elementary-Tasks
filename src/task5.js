@@ -28,14 +28,14 @@
 
                 if (softMethodCount > complicatedMethodCount) {
 
-                    return obj = {
+                    return {
                         method: 'Soft method has won!',
                         softMethod: softMethodCount,
                         complicatedMethod: complicatedMethodCount,
                     };
                 } else if (softMethodCount < complicatedMethodCount) {
 
-                    return obj = {
+                    return {
                         method: 'Complicated method has won!',
                         softMethod: softMethodCount,
                         complicatedMethod: complicatedMethodCount,
