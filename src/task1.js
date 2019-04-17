@@ -11,7 +11,7 @@
 
         function makeChessboard(height, width) {
 
-            if (validationData(height, width)) {
+            if (!validationData(height, width)) {
                 document.write('<table  border="0" cellspacing="1" cellpadding="3">');
 
                 for (var i = 0; i < height; i++) {
@@ -27,20 +27,19 @@
                     };
                     document.write('</tr>');
                 };
-            } else return;
+            } else return validationData(height, width);
         };
 
         function validationData(value1, value2) {
 
-            if ((value1 && width) && (value2 > 0 && value2 > 0)) {
-                return true;
-            } else {
-                console.log('{status: "failed", reason: "you have entered incorrect data"}');
-                return false;
+            if (value1 && width && value1 > 0 && value2 > 0) {
+                return 0;
+            } else return {
+                status: "failed",
+                reason: "Enter only positive numbers"
             };
         };
-
-        makeChessboard(height, width);
+        console.log(makeChessboard(height, width));
     };
 }());
 

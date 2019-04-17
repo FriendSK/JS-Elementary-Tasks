@@ -8,7 +8,7 @@
 
             str = str.toString();
 
-            if (validationData(str)) {
+            if (!validationData(str)) {
 
                 for (var i = 0; i < str.length; i++) {
 
@@ -20,23 +20,20 @@
                     };
                 };
                 return 0;
-            } else return;
+            } else return validationData(str);
         };
-
-        test = isPalindrome(inputValue);
-
-        console.log(test);
 
         function validationData(num) {
 
             var reg = /^\d+$/;
 
             if (reg.test(num)) {
-                return true;
-            } else {
-                console.log('{status: "failed", reason: "you have entered incorrect data"}');
-                return false;
-            };
+                return 0;
+            } else return {
+                status: "failed",
+                reason: "Enter only positive numeric natural values"
+            }
         };
+        console.log(isPalindrome(inputValue));
     };
 }());

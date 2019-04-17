@@ -50,6 +50,5 @@
             };
         };
         showResultNames(sortResult);
-
     };
 }());

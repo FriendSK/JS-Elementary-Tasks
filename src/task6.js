@@ -24,7 +24,7 @@
 
         function validationData(value1, value2) {
 
-            if ((value1 && value2) && (value1 > 0 && value2 > 0)) {
+            if (value1 && value2 && value1 > 0 && value2 > 0) {
                 return 0;
             } else {
 
@@ -40,8 +40,6 @@
                 }
             };
         };
-
-
         console.log(calcSequence(rowLength, minSquare));
     };
 }());
