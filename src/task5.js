@@ -15,7 +15,7 @@
 
         function processingTickets(min, max) {
 
-            if (validationData(min, max)) {
+            if (!validationData(min, max)) {
                 let softMethodCount = 0;
                 let complicatedMethodCount = 0;
 
@@ -43,7 +43,7 @@
                 } else {
                     console.log('None of the methods have won!');
                 };
-            } else return;
+            } else return validationData(min, max);
         };
 
         function dataToArray(value) {
@@ -92,10 +92,10 @@
             var reg = /^\d{6}$/;
 
             if (reg.test(min) && reg.test(max)) {
-                return true;
-            } else {
-                console.log('{status: "failed", reason: "you have entered incorrect data"}');
-                return false;
+                return 0;
+            } else return {
+                status: "failed",
+                reason: "Enter only positive six digits numeric values"
             };
         };
 
