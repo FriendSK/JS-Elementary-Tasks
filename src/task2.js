@@ -2,12 +2,12 @@
 
     module.task2 = function () {
 
-        var env1 = {};
-        var env2 = {};
-        var firstSide = prompt("Enter the left side of the first envelope").trim();
-        var secondSide = prompt("Enter the right side of the first envelope").trim();
-        var thirdSide = prompt("Enter the left side of the second envelope").trim();
-        var fourthSide = prompt("Enter the right side of the second envelope").trim();
+        let env1 = {};
+        let env2 = {};
+        let firstSide = prompt("Enter the left side of the first envelope").trim();
+        let secondSide = prompt("Enter the right side of the first envelope").trim();
+        let thirdSide = prompt("Enter the left side of the second envelope").trim();
+        let fourthSide = prompt("Enter the right side of the second envelope").trim();
         env1.h = parseFloat(firstSide);
         env1.w = parseFloat(secondSide);
         env2.h = parseFloat(thirdSide);
@@ -35,12 +35,13 @@
                 &&
                 (env1.h > 0 && env1.w > 0 && env2.h > 0 && env2.w > 0)) {
                 return 0;
-            } else  return {
-                status: "failed",
-                reason: "Enter only positive numeric values"
-            };
+            } else
+                return {
+                    status: "failed",
+                    reason: "Enter only positive numeric values"
+                };
         };
 
-     console.log(compareEnvelops(env1, env2));
+        console.log(compareEnvelops(env1, env2));
     };
 }());

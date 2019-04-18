@@ -2,24 +2,37 @@
 
     module.task7 = function () {
 
-        var inputValue = prompt("Enter a  length of sequence").trim();
-        var lengthValue = +parseFloat(inputValue).toFixed(0);
-        var context = {
-            length: lengthValue
+        let inputValue = prompt("Enter a  length of sequence").trim();
+        let context = {
+            length: inputValue
         };
 
-        function calcFibo(num) {
+        function transformData(data) {
+            let value = +parseFloat(data).toFixed(0);
+            return value;
+        };
+        
+        function calcFibo(value) {
 
-            if (!validationData(num)) {
+            let len = transformData(value);
+            let getNum = 0;
+            let arr = [0, 1];
+            let res = [];
 
-                if (num === 1)
-                    return [0, 1];
-                else {
-                    var array = calcFibo(num - 1);
-                    array.push(array[array.length - 1] + array[array.length - 2]);
-                    return array;
+            if (!validationData(len)) {
+
+                for (let i = 2; getNum.toString().length < len + 1; i++) {
+
+                    arr.push(arr[i - 1] + arr[i - 2]);
+                    getNum = arr[i - 1];
+
+                    if (getNum.toString().length === len) {
+                        res.push(getNum);
+                    }
                 };
-            } else return validationData(num);
+                return res;
+
+            } else return validationData(value);
         };
 
         function validationData(value) {
@@ -27,18 +40,16 @@
             if (value && value > 0)
                 return 0;
 
-            else {
-                if (!value)
-                    return {
-                        status: "failed",
-                        reason: "you have entered a non numeric or zero value"
-                    }
-                else (value < 0)
+            else if (!value)
                 return {
                     status: "failed",
-                    reason: "you have entered a negative value"
+                    reason: "you have entered a non reseric or zero value"
                 }
-            }
+            else 
+             return {
+                    status: "failed",
+                    reason: "you have entered a negative value"
+                };
         };
         console.log(calcFibo(context.length));
     };

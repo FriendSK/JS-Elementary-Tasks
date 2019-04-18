@@ -2,7 +2,7 @@
 
     module.task3 = function () {
 
-        var triangles = [
+        let triangles = [
             {
                 vertices: 'ABC',
                 a: 10,
@@ -23,14 +23,14 @@
             }
         ]
 
-        var arraysOfArr = triangles.map((item) => {
+        let arraysOfArr = triangles.map((item) => {
             return Object.values(item)
         });
 
-        var calculateSquare = arraysOfArr.map((item) => {
-            var arr = [item[0]];
-            var p = (item[1] + item[2] + item[3]) / 2;
-            var s = Math.sqrt(p * (p - item[1]) * (p - item[2]) * (p - item[3]));
+        let calculateSquare = arraysOfArr.map((item) => {
+            let arr = [item[0]];
+            let p = (item[1] + item[2] + item[3]) / 2;
+            let s = Math.sqrt(p * (p - item[1]) * (p - item[2]) * (p - item[3]));
             arr.push(s);
             return arr;
         });
@@ -41,11 +41,11 @@
             return a[1] - b[1];
         };
 
-        var sortResult = calculateSquare.sort(compareArrays);
+        let sortResult = calculateSquare.sort(compareArrays);
 
         function showResultNames() {
 
-            for (var i = 0; i < sortResult.length; i++) {
+            for (let i = 0; i < sortResult.length; i++) {
                 console.log(sortResult[i][0]);
             };
         };

@@ -2,19 +2,19 @@
 
     module.task6 = function () {
 
-        var value1 = prompt("Enter a row length").trim();
-        var value2 = prompt("Enter a min value of square").trim();
-        var resultArr = [];
-        var rowLength = +parseFloat(value1).toFixed(0);
-        var minSquare = +parseFloat(value2).toFixed(0);
+        let value1 = prompt("Enter a row length").trim();
+        let value2 = prompt("Enter a min value of square").trim();
+        let resultArr = [];
+        let rowLength = +parseFloat(value1).toFixed(0);
+        let minSquare = +parseFloat(value2).toFixed(0);
 
         function calcSequence(len, minSquare) {
 
-            var sqrt = +Math.sqrt(minSquare).toFixed(0);
+            let sqrt = +Math.sqrt(minSquare).toFixed(0);
 
             if (!validationData(len, sqrt)) {
 
-                for (var i = sqrt; i < len + sqrt; i++) {
+                for (let i = sqrt; i < len + sqrt; i++) {
                     resultArr.push(i);
                 }
                 return resultArr.join(',');
@@ -33,11 +33,11 @@
                         status: "failed",
                         reason: "you have entered a non numeric or zero value"
                     }
-                else (value1 >= 0 && value2 >= 0)
-                return {
-                    status: "failed",
-                    reason: "you have entered a negative value"
-                }
+                else
+                    return {
+                        status: "failed",
+                        reason: "you have entered a negative value"
+                    }
             };
         };
         console.log(calcSequence(rowLength, minSquare));

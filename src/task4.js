@@ -2,7 +2,7 @@
 
     module.task4 = function () {
 
-        var inputValue = prompt("Enter numbers").trim();
+        let inputValue = prompt("Enter numbers").trim();
 
         function isPalindrome(str) {
 
@@ -10,11 +10,11 @@
 
             if (!validationData(str)) {
 
-                for (var i = 0; i < str.length; i++) {
+                for (let i = 0; i < str.length; i++) {
 
-                    for (var j = 0; j < str.length; j++) {
-                        var row = str.slice(i, j + i + 1);
-                        var row2 = row.split('').reverse().join('');
+                    for (let j = 0; j < str.length; j++) {
+                        let row = str.slice(i, j + i + 1);
+                        let row2 = row.split('').reverse().join('');
 
                         if (row == row2 && row.length > 2) return row;
                     };
@@ -25,14 +25,15 @@
 
         function validationData(num) {
 
-            var reg = /^\d+$/;
+            let reg = /^\d+$/;
 
             if (reg.test(num)) {
                 return 0;
-            } else return {
-                status: "failed",
-                reason: "Enter only positive numeric natural values"
-            }
+            } else
+                return {
+                    status: "failed",
+                    reason: "Enter only positive  natural digits"
+                }
         };
         console.log(isPalindrome(inputValue));
     };

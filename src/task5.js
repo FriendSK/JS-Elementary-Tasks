@@ -2,16 +2,16 @@
 
     module.task5 = function () {
 
-        var inputValue1 = prompt("Enter a  min six-digit value of tickets").trim();
-        var inputValue2 = prompt("Enter a  max six-digit value of tickets").trim();
+        let inputValue1 = prompt("Enter a  min six-digit value of tickets").trim();
+        let inputValue2 = prompt("Enter a  max six-digit value of tickets").trim();
 
-        var context = {
+        let context = {
             min: inputValue1,
             max: inputValue2
         };
 
-        var value1 = context.min;
-        var value2 = context.max;
+        let value1 = context.min;
+        let value2 = context.max;
 
         function processingTickets(min, max) {
 
@@ -19,8 +19,8 @@
                 let softMethodCount = 0;
                 let complicatedMethodCount = 0;
 
-                for (var i = min; i <= max; i++) {
-                    var arrData = dataToArray(i);
+                for (let i = min; i <= max; i++) {
+                    let arrData = dataToArray(i);
 
                     softMethodCount += calcSoftMethod(arrData);
                     complicatedMethodCount += calcComplicatedMethod(arrData);
@@ -47,11 +47,11 @@
         };
 
         function dataToArray(value) {
-            var arr = [];
+            let arr = [];
             arr.length = 6;
-            var str = value.toString();
+            let str = value.toString();
 
-            for (var i = 0; i < str.length; i++) {
+            for (let i = 0; i < str.length; i++) {
                 arr[i] = str[i]
 
             };
@@ -60,11 +60,11 @@
 
         function calcSoftMethod(value) {
 
-            var counter = 0;
-            var leftSum = 0;
-            var rightSum = 0;
+            let counter = 0;
+            let leftSum = 0;
+            let rightSum = 0;
 
-            for (var i = 0; i < value.length / 2; i++) {
+            for (let i = 0; i < value.length / 2; i++) {
                 leftSum += +(value[i]);
                 rightSum += +(value[i + (value.length / 2)]);
             }
@@ -75,11 +75,11 @@
 
         function calcComplicatedMethod(value) {
 
-            var counter = 0;
-            var evenValue = 0;
-            var oddValue = 0;
+            let counter = 0;
+            let evenValue = 0;
+            let oddValue = 0;
 
-            for (var i = 0; i < value.length; i++) {
+            for (let i = 0; i < value.length; i++) {
 
                 value[i] % 2 ? oddValue += +value[i] : evenValue += +value[i]
             };
@@ -89,17 +89,18 @@
 
         function validationData(min, max) {
 
-            var reg = /^\d{6}$/;
+            let reg = /^\d{6}$/;
 
             if (reg.test(min) && reg.test(max)) {
                 return 0;
-            } else return {
-                status: "failed",
-                reason: "Enter only positive six digits numeric values"
-            };
+            } else
+                return {
+                    status: "failed",
+                    reason: "Enter only positive six digits numeric values"
+                };
         };
 
-        var res = processingTickets(value1, value2);
+        let res = processingTickets(value1, value2);
         console.log(res);
     };
 }());
