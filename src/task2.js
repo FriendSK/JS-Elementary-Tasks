@@ -17,10 +17,10 @@
 
             if (!validationData(env1, env2)) {
 
-                if ((env1.h > env2.h) && (env1.w > env2.w) || (env1.h > env2.w) && (env1.w > env2.h)) {
+                if (env1.h > env2.h && env1.w > env2.w || env1.h > env2.w && env1.w > env2.h) {
                     console.log('The 2 envelope can be put in the 1');
                 }
-                else if ((env2.h > env1.h) && (env2.w > env1.w) || (env1.h < env2.w) && (env1.w < env2.h)) {
+                else if (env2.h > env1.h && env2.w > env1.w || env1.h < env2.w && env1.w < env2.h) {
                     console.log('The 1 envelope can be put in the 2');
                 } else {
                     console.log('Envelops can`t be put into each other');

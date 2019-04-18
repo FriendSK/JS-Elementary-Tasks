@@ -4,13 +4,18 @@
 
         let value1 = prompt("Enter a row length").trim();
         let value2 = prompt("Enter a min value of square").trim();
-        let resultArr = [];
-        let rowLength = +parseFloat(value1).toFixed(0);
-        let minSquare = +parseFloat(value2).toFixed(0);
 
-        function calcSequence(len, minSquare) {
+        function transformData(data) {
+            let value = +parseFloat(data).toFixed(0);
+            return value;
+        };
 
-            let sqrt = +Math.sqrt(minSquare).toFixed(0);
+        function calcSequence(rowLength, minSquare) {
+
+            let resultArr = [];
+            let len = transformData(rowLength);
+            let square = transformData(minSquare);
+            let sqrt = +Math.sqrt(square).toFixed(0);
 
             if (!validationData(len, sqrt)) {
 
@@ -40,6 +45,6 @@
                     }
             };
         };
-        console.log(calcSequence(rowLength, minSquare));
+        console.log(calcSequence(value1, value2));
     };
 }());

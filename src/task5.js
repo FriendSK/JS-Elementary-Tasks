@@ -10,9 +10,6 @@
             max: inputValue2
         };
 
-        let value1 = context.min;
-        let value2 = context.max;
-
         function processingTickets(min, max) {
 
             if (!validationData(min, max)) {
@@ -100,7 +97,7 @@
                 };
         };
 
-        let res = processingTickets(value1, value2);
+        let res = processingTickets(context.min, context.max);
         console.log(res);
     };
 }());

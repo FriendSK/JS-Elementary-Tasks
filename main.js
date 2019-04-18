@@ -1,12 +1,12 @@
 function runTask1() {
     module.task1();
 }
-runTask1();
+// runTask1();
 
 function runTask2() {
     module.task2();
 }
-// runTask2();
+runTask2();
 
 function runTask3() {
     module.task3();
