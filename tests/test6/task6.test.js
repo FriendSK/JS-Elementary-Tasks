@@ -1,6 +1,6 @@
 describe("validationData", function () {
 
-    it("validates data", function () {
+    it(`validates data by entering incorrect values  expected to be a "zero"`, function () {
 
         let arr = [1, 4.5, 999999999999999, true,]
 
@@ -15,7 +15,7 @@ describe("validationData", function () {
 
 describe("validationData", function () {
 
-    it("validates data", function () {
+    it(`validates data by entering incorrect values  expected to be an "object"`, function () {
 
         let arr = [0, -3, '3b', NaN, 'g', false, null, undefined,]
 
@@ -51,7 +51,7 @@ describe("calcSequence", function () {
 
     function makeTest(x, y) {
 
-        it("During validation  it calculates a sequence",
+        it(`During validation by entering "${x}" and "${y}" it calculates a  sequence  "${calcSequence(x, y)}" `,
             function () {
                 assert.equal((calcSequence(x, y)), '2,3,4,5,6');
             });
