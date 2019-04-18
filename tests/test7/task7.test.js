@@ -26,4 +26,28 @@ describe("validationData", function () {
     });
 });
 
+describe("calcFiboByLength", function () {
 
+    function makeTest(x) {
+
+        it("During validation  it calculates a Fibo sequence by length",
+            function () {
+                result = calcFiboByLength(3);
+                assert.equal(result.join(', '), '144, 233, 377, 610, 987');
+            });
+    }
+    makeTest(3);
+});
+
+describe("calcFiboByRange", function () {
+
+    function makeTest(x, y) {
+
+        it("During validation  it calculates a Fibo sequence by range",
+            function () {
+                result = calcFiboByRange(2, 8);
+                assert.equal(result.join(', '), '2, 3, 5, 8');
+            });
+    }
+    makeTest(2, 8);
+});
