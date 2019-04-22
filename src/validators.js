@@ -6,12 +6,12 @@ function validationDataForFibo(value) {
     else if (!value)
         return obj = {
             status: "failed",
-            reason: "you have entered a non numeric or zero value"
+            reason: "you have entered a non numeric or zero value!"
         }
     else
         return obj = {
             status: "failed",
-            reason: "you have entered a negative value"
+            reason: "you have entered a negative value!"
         };
 };
 

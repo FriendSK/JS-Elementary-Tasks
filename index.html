@@ -15,10 +15,10 @@ tstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
 <body>
 
 
-    <div class="container-fluid">
-        <h1>JS Elementary Task</h1>
+    <div class="container ml-80 ">
+        <h1 class="text-center">JS Elementary Tasks</h1>
         <br />
-        <div>
+        <div class="jumbotron">
             <h2>1. Шахматная доска</h2>
             <p>Вывести шахматную доску с заданными<br /> размерами высоты и ширины, по принципу:</p>
             <pre>
@@ -33,10 +33,10 @@ tstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
             <input placeholder="Введите длинну" type="text">
             <input placeholder="Введите ширину" type="text">
             <input placeholder="Введите символ" type="text">
-            <button onclick="runTask1()" class="btn btn-primary" id="makeBoard">Показать доску</button><br /><br />
-            <h4 id="output" class="alert-warning"></h4>
+            <button onclick="runTask1()" class="btn btn-primary" id="makeBoard">Показать доску</button>
+            <h4 id="output" class="alert alert-light"></h4>
         </div>
-        <div>
+        <div class="jumbotron">
             <br />
             <h2>2. Анализ конвертов</h2>
             <p>Есть два конверта со сторонами (a,b) и (c,d). <br />Требуется определить, можно ли один конверт вложить в
@@ -50,10 +50,10 @@ tstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
             <p>Введите стороны Конверта 2:</p>
             <input placeholder="Высота">
             <input placeholder="Ширина">
-            <button onclick="runTask2()" class="btn btn-primary">Вложить конверты</button><br /><br />
-            <h4 id="output" class="alert-warning"></h4>
+            <button onclick="runTask2()" class="btn btn-primary">Вложить конверты</button>
+            <h4 id="output" class="alert alert-light"></h4>
         </div>
-        <div> <br />
+        <div class="jumbotron">
             <h2>3. Сортировка треугольников</h2>
             <p>Вывести треугольники в порядке убывания их площади.<br />
 
@@ -77,10 +77,10 @@ tstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
             <button onclick="addTriangle()" class="btn btn-primary">Добавить треугольник</button><br /><br />
             <input placeholder="Введите вторую сторону" type="text">
             <input placeholder="Введите третью сторону" type="text">
-            <button onclick="runTask3(triangles)" class="btn btn-primary">Сортировать по площади</button><br /><br />
-            <h4 id="output" class="alert-warning"></h4>
+            <button onclick="runTask3(triangles)" class="btn btn-primary">Сортировать по площади</button>
+            <h4 id="output" class="alert alert-light"></h4>
         </div>
-        <div> <br />
+        <div class="jumbotron">
             <h2>4. Является ли данное число палиндромом?</h2>
             <p>Проверить является ли число или его часть палиндромом.<br />
                 Например, число 1234437 не является палиндромом, но является палиндромом его часть 3443.<br />
@@ -89,10 +89,10 @@ tstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
                 Выход: извлечённый из числа наибольший палиндром либо 0, если извлечение не удалось.</p>
             <p>Введите натуральные числа:</p>
             <input placeholder="Введите палиндром" type="text">
-            <button onclick="runTask4()" class="btn btn-primary">Найти палиндром</button><br /><br />
-            <h4 id="output" class="alert-warning"></h4>
+            <button onclick="runTask4()" class="btn btn-primary">Найти палиндром</button>
+            <h4 id="output" class="alert alert-light"></h4>
         </div>
-        <div> <br />
+        <div class="jumbotron">
             <h2>5. Счастливые билеты</h2>
             <p>Есть 2 способа подсчёта счастливых билетов:<br />
                 1. Простой — если на билете напечатано шестизначное число, и сумма первых трёх цифр равна сумме<br />
@@ -108,11 +108,11 @@ tstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
 
             <input placeholder="Введите min значение" type="text">
             <input placeholder="Введите max значение" type="text">
-            <button onclick="runTask5()" class="btn btn-primary">Расчитать лучший медот</button><br /><br />
-            <h4 id="output" class="alert-warning"></h4>
+            <button onclick="runTask5()" class="btn btn-primary">Расчитать лучший медот</button>
+            <h4 id="output" class="alert alert-light"></h4>
         </div>
 
-        <div> <br />
+        <div class="jumbotron">
             <h2>6. Числовая последовательность</h2>
             <p>Вывести через запятую ряд длиной n, состоящий из натуральных чисел, <br />
                 квадрат которых не меньше заданного m.<br />
@@ -122,10 +122,10 @@ tstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
 
             <input placeholder="Введите длинну ряда" type="text">
             <input placeholder="Введите значение квадрата" type="text">
-            <button onclick="runTask6()" class="btn btn-primary">Рассчитать ряд</button><br /><br />
-            <h4 id="output" class="alert-warning"></h4>
+            <button onclick="runTask6()" class="btn btn-primary">Рассчитать ряд</button>
+            <h4 id="output" class="alert alert-light"></h4>
         </div>
-        <div id="fibo"> <br />
+        <div id="fibo" class="jumbotron">
             <h2>7. Ряд Фибоначчи для диапазона</h2>
             <p>Вывести все числа Фибоначчи, которые удовлетворяют переданному в функцию ограничению:<br /> находятся
                 в указанном диапазоне, либо имеют указанную длину.<br />
@@ -136,11 +136,12 @@ tstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
             <p>Введите значения min и max или значение length: </p>
             <input placeholder="Введите min значениe" type="text">
             <input placeholder="Введите max значениe" type="text">
-            <button onclick="runTask7()" data="1" class="byRange btn btn-primary">Расчитать по min max</button><br />
+            <button onclick="runTask7()" data="1" class="byRange btn btn-primary">Расчитать по min
+                max</button><br /><br />
 
             <input placeholder="Введите длинну" type="text">
-            <button onclick="runTask7()" data="2" class="btn btn-primary">Расчитать по длинне</button><br /><br />
-            <h4 id="output" class="alert-warning"></h4><br /><br /><br />
+            <button onclick="runTask7()" data="2" class="btn btn-primary">Расчитать по длинне</button>
+            <h4 id="output" class="alert alert-light"></h4>
         </div>
     </div>
 
