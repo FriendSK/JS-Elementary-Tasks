@@ -1,40 +1,22 @@
-(function () {
+jsElementaryTasks.task4 = function (str) {
 
-    module.task4 = function () {
+    function getPalindrome(str) {
 
-        let inputValue = prompt("Enter numbers").trim();
+        str = str.toString();
 
-        function isPalindrome(str) {
+        if (!validationDataForPalindrome(str)) {
 
-            str = str.toString();
+            for (let i = 0; i < str.length; i++) {
 
-            if (!validationData(str)) {
+                for (let j = 0; j < str.length; j++) {
+                    let row = str.slice(i, j + i + 1);
+                    let row2 = row.split('').reverse().join('');
 
-                for (let i = 0; i < str.length; i++) {
-
-                    for (let j = 0; j < str.length; j++) {
-                        let row = str.slice(i, j + i + 1);
-                        let row2 = row.split('').reverse().join('');
-
-                        if (row == row2 && row.length > 2) return row;
-                    };
+                    if (row == row2 && row.length > 2) return row;
                 };
-                return 0;
-            } else return validationData(str);
-        };
-
-        function validationData(num) {
-
-            let reg = /^\d+$/;
-
-            if (reg.test(num)) {
-                return 0;
-            } else
-                return {
-                    status: "failed",
-                    reason: "Enter only positive  natural digits"
-                }
-        };
-        console.log(isPalindrome(inputValue));
+            };
+            return 0;
+        } else return `Status: ${obj.status}, reason: ${obj.reason}`;
     };
-}());
+    return getPalindrome(str);
+};

@@ -5,10 +5,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home work</title>
+    <title>JS Elementary Task</title>
+
+    <link rel="stylesheet" href="https://stackpath.boo
+tstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 </head>
 
 <body>
+
+
+    <div class="container-fluid">
+        <h1>JS Elementary Task</h1>
+        <br />
+        <div>
+            <h2>1. Шахматная доска</h2>
+            <p>Вывести шахматную доску с заданными<br /> размерами высоты и ширины, по принципу:</p>
+            <pre>
+                                *  *  *  *  *  *
+                                  *  *  *  *  *  *
+                                *  *  *  *  *  *
+                                  *  *  *  *  *  *
+                        </pre>
+            <p>Входные параметры: длина, ширина, символ для отображения.<br />
+                Выход: строка с представлением шахматной доски.</p>
+
+            <input placeholder="Введите длинну" type="text">
+            <input placeholder="Введите ширину" type="text">
+            <input placeholder="Введите символ" type="text">
+            <button onclick="runTask1()" class="btn btn-primary" id="makeBoard">Показать доску</button><br /><br />
+            <h4 id="output" class="alert-warning"></h4>
+        </div>
+        <div>
+            <br />
+            <h2>2. Анализ конвертов</h2>
+            <p>Есть два конверта со сторонами (a,b) и (c,d). <br />Требуется определить, можно ли один конверт вложить в
+                другой. Программа должна обрабатывать ввод чисел с плавающей точкой.<br />
+                Входные параметры: объекты конверт1 и конверт2.<br />
+                Выход: номер конверта, если вложение возможно, 0 – если вложение невозможно.</p>
+
+            <p>Введите стороны Конверта 1:</p>
+            <input placeholder="Высота">
+            <input placeholder="Ширина"> <br /><br />
+            <p>Введите стороны Конверта 2:</p>
+            <input placeholder="Высота">
+            <input placeholder="Ширина">
+            <button onclick="runTask2()" class="btn btn-primary">Вложить конверты</button><br /><br />
+            <h4 id="output" class="alert-warning"></h4>
+        </div>
+        <div> <br />
+            <h2>3. Сортировка треугольников</h2>
+            <p>Вывести треугольники в порядке убывания их площади.<br />
+
+                Входные параметры: массив объектов треугольник<br />
+                Выход: упорядоченный массив имён треугольников<br />
+
+                Примечание:<br />
+                • Расчёт площади треугольника должен производится по формуле Герона.<br />
+                • Каждый треугольник определяется именами вершин и длинами его сторон. <br />
+                • Приложение должно обрабатывать ввод чисел с плавающей точкой:<br />
+                { <br />
+                vertices: ‘ABC’,<br />
+                a: 10,<br />
+                b: 20,<br />
+                c: 22.36<br />
+                }</p>
+            <p>Введите массив объектов треугольник:</p>
+
+            <input placeholder="Введите название" type="text">
+            <input placeholder="Введите первую сторону" type="text">
+            <button onclick="addTriangle()" class="btn btn-primary">Добавить треугольник</button><br /><br />
+            <input placeholder="Введите вторую сторону" type="text">
+            <input placeholder="Введите третью сторону" type="text">
+            <button onclick="runTask3(triangles)" class="btn btn-primary">Сортировать по площади</button><br /><br />
+            <h4 id="output" class="alert-warning"></h4>
+        </div>
+        <div> <br />
+            <h2>4. Является ли данное число палиндромом?</h2>
+            <p>Проверить является ли число или его часть палиндромом.<br />
+                Например, число 1234437 не является палиндромом, но является палиндромом его часть 3443.<br />
+                Числа меньшие, чем 10 палиндромом не считать.<br />
+                Входные параметры: число.<br />
+                Выход: извлечённый из числа наибольший палиндром либо 0, если извлечение не удалось.</p>
+            <p>Введите натуральные числа:</p>
+            <input placeholder="Введите палиндром" type="text">
+            <button onclick="runTask4()" class="btn btn-primary">Найти палиндром</button><br /><br />
+            <h4 id="output" class="alert-warning"></h4>
+        </div>
+        <div> <br />
+            <h2>5. Счастливые билеты</h2>
+            <p>Есть 2 способа подсчёта счастливых билетов:<br />
+                1. Простой — если на билете напечатано шестизначное число, и сумма первых трёх цифр равна сумме<br />
+                последних трёх, то этот билет считается счастливым.<br />
+                2. Сложный — если сумма чётных цифр билета равна сумме нечётных цифр билета, то билет считается<br />
+                счастливым.<br />
+                Определить программно какой вариант подсчёта счастливых билетов даст их большее количество на
+                <br />заданном интервале. <br />
+
+                Входные параметры: объект context с полями min и max.<br />
+                Выход: объект с информацией о победившем методе и количестве счастливых билетов для каждого способа
+                подсчёта.</p>
+
+            <input placeholder="Введите min значение" type="text">
+            <input placeholder="Введите max значение" type="text">
+            <button onclick="runTask5()" class="btn btn-primary">Расчитать лучший медот</button><br /><br />
+            <h4 id="output" class="alert-warning"></h4>
+        </div>
+
+        <div> <br />
+            <h2>6. Числовая последовательность</h2>
+            <p>Вывести через запятую ряд длиной n, состоящий из натуральных чисел, <br />
+                квадрат которых не меньше заданного m.<br />
+
+                Входные параметры: длина и значение минимального квадрата.<br />
+                Выход: строка с рядом чисел.</p>
+
+            <input placeholder="Введите длинну ряда" type="text">
+            <input placeholder="Введите значение квадрата" type="text">
+            <button onclick="runTask6()" class="btn btn-primary">Рассчитать ряд</button><br /><br />
+            <h4 id="output" class="alert-warning"></h4>
+        </div>
+        <div id="fibo"> <br />
+            <h2>7. Ряд Фибоначчи для диапазона</h2>
+            <p>Вывести все числа Фибоначчи, которые удовлетворяют переданному в функцию ограничению:<br /> находятся
+                в указанном диапазоне, либо имеют указанную длину.<br />
+
+                Входные параметры: объект context с полями min и max, либо с полем length. <br />
+                Выход: массив чисел.</p>
+
+            <p>Введите значения min и max или значение length: </p>
+            <input placeholder="Введите min значениe" type="text">
+            <input placeholder="Введите max значениe" type="text">
+            <button onclick="runTask7()" data="1" class="byRange btn btn-primary">Расчитать по min max</button><br />
+
+            <input placeholder="Введите длинну" type="text">
+            <button onclick="runTask7()" data="2" class="btn btn-primary">Расчитать по длинне</button><br /><br />
+            <h4 id="output" class="alert-warning"></h4><br /><br /><br />
+        </div>
+    </div>
 
     <script src="./src/task1.js"></script>
     <script src="./src/task2.js"></script>
@@ -17,7 +151,10 @@
     <script src="./src/task5.js"></script>
     <script src="./src/task6.js"></script>
     <script src="./src/task7.js"></script>
+    <script src="./src/commonFunctions.js"></script>
+    <script src="./src/validators.js"></script>
     <script src="./main.js"></script>
+
 </body>
 
 </html>

@@ -1,53 +1,32 @@
-(function () {
+let jsElementaryTasks = {};
 
-    window.module = {};
-    module.task1 = function () {
+jsElementaryTasks.task1 = function (heightValue, widthValue, sym) {
 
-        let heightValue = prompt("Enter a chessboard height").trim();
-        let widthValue = prompt("Enter a chessboard width").trim();
-        let sym = prompt("Enter a symbol to display").trim();
+    function getChessboard(heightValue, widthValue, sym) {
 
-        function transformData(data) {
-            let value = +parseInt(data);
-            return value;
-        }
+        let height = transformDataInt(heightValue);
+        let width = transformDataInt(widthValue);
 
-        function makeChessboard(heightValue, widthValue) {
+        if (!validationDataForBoard(height, width)) {
 
-            let height = transformData(heightValue);
-            let width = transformData(widthValue);
+            let str = '';
 
-            if (!validationData(height, width)) {
+            for (let i = 0; i < height; i++) {
 
-                document.write('<table  border="0" cellspacing="1" cellpadding="3">');
+                for (let j = 0; j < width; j++) {
 
-                for (let i = 0; i < height; i++) {
-                    document.write('<tr>');
-
-                    for (let j = 0; j < width; j++) {
-
-                        if (i % 2 === 0) {
-                            document.write('<td>' + sym + '</td>');
-                        } else {
-                            document.write('<td>' + '&nbsp' + sym + '</td>');
-                        };
+                    if (i % 2 === 0) {
+                        str += '&nbsp' + sym + '&nbsp';
+                    } else {
+                        str += '&nbsp' + '&nbsp' + sym;
                     };
-                    document.write('</tr>');
                 };
-            } else return validationData(height, width);
-        };
+                str = str + '<br>';
+            };
+            return str;
 
-        function validationData(value1, value2) {
-
-            if (value1 && value2 && value1 > 0 && value2 > 0) {
-                return 0;
-            } else
-                return {
-                    status: "failed",
-                    reason: "Enter only positive numbers"
-                };
-        };
-        console.log(makeChessboard(heightValue, widthValue));
+        } else return `Status: ${obj.status}, reason: ${obj.reason}`;
     };
-}());
+    return getChessboard(heightValue, widthValue, sym);
+};
 
