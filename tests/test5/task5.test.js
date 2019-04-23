@@ -41,7 +41,7 @@ describe("getTickets", function () {
 
     function makeTest(x, y) {
 
-        it(`Calculating counting method of tickets from  "${x}" to  "${y}" numeric range and returns a solution string  "${getTickets(x, y)}" `,
+        it(`Calculates counting methods of tickets from  "${x}" to  "${y}" numeric range and returns a solution string  "${getTickets(x, y)}" `,
             function () {
                 assert.equal(typeof(getTickets(x, y)), 'string');
             });
