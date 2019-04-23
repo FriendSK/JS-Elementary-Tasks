@@ -1,7 +1,7 @@
 jsElementaryTasks.task7 = function (event, context) {
 
     function getFiboByLength(context) {
-        let len = transformDataInt(context.length);
+        let len = transformIntData(context.length);
         let getNum = 0;
         let arr = [0, 1];
         let res = [];
@@ -22,8 +22,8 @@ jsElementaryTasks.task7 = function (event, context) {
 
     function getFiboByRange(context) {
 
-        let min = transformDataFloat(context.min);
-        let max = transformDataFloat(context.max);
+        let min = transformFloatData(context.min);
+        let max = transformFloatData(context.max);
         let getNum = 0;
         let arr = [0, 1];
         let res = [];
@@ -41,8 +41,9 @@ jsElementaryTasks.task7 = function (event, context) {
             return res;
         } else return `Status: ${obj.status}, reason: ${obj.reason}`;
     };
-    
+
     function getAnswerChoise(event) {
+
         if (event.target.getAttribute('data') === '2')
 
             return getFiboByLength(context);

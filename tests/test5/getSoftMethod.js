@@ -1,4 +1,4 @@
-function calcSoftMethod(value) {
+function getSoftMethod(value) {
 
     let counter = 0;
     let leftSum = 0;

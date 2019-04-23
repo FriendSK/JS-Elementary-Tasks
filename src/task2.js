@@ -2,10 +2,10 @@ jsElementaryTasks.task2 = function (firstSide, secondSide, thirdSide, fourthSide
 
     let env1 = {};
     let env2 = {};
-    env1.h = transformDataInt(firstSide);
-    env1.w = transformDataInt(secondSide);
-    env2.h = transformDataInt(thirdSide);
-    env2.w = transformDataInt(fourthSide);
+    env1.h = transformIntData(firstSide);
+    env1.w = transformIntData(secondSide);
+    env2.h = transformIntData(thirdSide);
+    env2.w = transformIntData(fourthSide);
 
     function compareEnvelops(env1, env2) {
 

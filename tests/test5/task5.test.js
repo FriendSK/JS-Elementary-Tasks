@@ -1,24 +1,50 @@
-describe("calcSoftMethod", function () {
+describe("getSoftMethod", function () {
 
     function makeTest(x) {
 
-        it(`If the number "${x}" on ticket is the lucky number it counts   "${calcSoftMethod(x)}" `,
+        it(`If the number "${x}" on ticket is the lucky number it counts   "${getSoftMethod(x)}" `,
             function () {
-                assert.equal(calcSoftMethod(x), '1');
+                assert.equal(getSoftMethod(x), '1');
             });
     }
     makeTest('123321');
 });
 
 
-describe("calcComplicatedMethod", function () {
+describe("getComplicatedMethod", function () {
 
     function makeTest(x) {
 
-        it(`It counts sum of even and odd numbers "${x}" on ticket and return  "${calcComplicatedMethod(x)}" if it is equal `,
+        it(`It counts sum of even and odd numbers "${x}" on ticket and returns  "${getComplicatedMethod(x)}" if it is equal `,
             function () {
-                assert.equal(calcComplicatedMethod(x), '1');
+                assert.equal(getComplicatedMethod(x), '1');
             });
     }
     makeTest('111221');
+});
+
+
+describe("dataToArray", function () {
+
+    function makeTest(x) {
+
+        it(`It converts data ${x} to array  and returns  it `,
+            function () {
+                assert.equal(dataToArray(x).toString(), '2,3,2,3,2,3');
+            });
+    }
+    makeTest(232323);
+});
+
+
+describe("getTickets", function () {
+
+    function makeTest(x, y) {
+
+        it(`Calculating counting method of tickets from  "${x}" to  "${y}" numeric range and returns a solution string  "${getTickets(x, y)}" `,
+            function () {
+                assert.equal(typeof(getTickets(x, y)), 'string');
+            });
+    }
+    makeTest(123213, 234234);
 });

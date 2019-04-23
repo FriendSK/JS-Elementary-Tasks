@@ -1,4 +1,4 @@
-function calcComplicatedMethod(value) {
+function getComplicatedMethod(value) {
 
     let counter = 0;
     let evenValue = 0;

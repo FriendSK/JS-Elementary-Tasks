@@ -4,8 +4,8 @@ jsElementaryTasks.task1 = function (heightValue, widthValue, sym) {
 
     function getChessboard(heightValue, widthValue, sym) {
 
-        let height = transformDataInt(heightValue);
-        let width = transformDataInt(widthValue);
+        let height = transformIntData(heightValue);
+        let width = transformIntData(widthValue);
 
         if (!validationDataForBoard(height, width)) {
 

@@ -3,8 +3,8 @@ jsElementaryTasks.task6 = function (row, min) {
     function getSequence(row, min) {
 
         let resultArr = [];
-        let len = transformDataFloat(row);
-        let square = transformDataFloat(min);
+        let len = transformFloatData(row);
+        let square = transformFloatData(min);
         let sqrt = +Math.sqrt(square).toFixed(0);
 
         if (!validationDataForSequence(len, sqrt)) {
