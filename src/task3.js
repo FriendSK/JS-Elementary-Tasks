@@ -18,5 +18,6 @@ jsElementaryTasks.task3 = function (triangles) {
     };
 
     let sortResult = getSquare.sort(compareArrays);
+    console.log(sortResult);
     return sortResult;
 };

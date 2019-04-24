@@ -48,3 +48,30 @@ describe("getTickets", function () {
     }
     makeTest(123213, 234234);
 });
+
+
+
+describe("validationDataForTickets", function () {
+
+    function makeTest(x, y) {
+        it(`validates whether are numeric data  six-digits value or not and  expected to be a "zero" if so.`,
+
+            function () {
+                assert.equal(validationDataForTickets(x, y), 0);
+            });
+    }
+    makeTest(123456, 234567);
+});
+
+describe("validationDataForTickets", function () {
+
+    function makeTest(x) {
+
+        it(`validates data by entering incorrect values and  expected to be an "object"`,
+            function () {
+
+                assert.equal(typeof (validationDataForTickets(x)), "object");
+            });
+    }
+    makeTest(-8);
+});

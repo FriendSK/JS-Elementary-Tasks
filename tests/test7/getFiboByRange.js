@@ -1,7 +1,7 @@
 function getFiboByRange(value1, value2) {
 
-    let min = transformFloatData(value1);
-    let max = transformFloatData(value2);
+    let min = +value1;
+    let max = +value2;
     let getNum = 0;
     let arr = [0, 1];
     let res = [];

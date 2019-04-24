@@ -1,4 +1,4 @@
-function validationDataForFibo2(value1, value2) {
+function validationDataForFiboByRange(value1, value2) {
 
     if (value1 && value2 && value1 > 0 && value2 > 0 && value1 < value2) {
         return 0;
@@ -12,7 +12,7 @@ function validationDataForFibo2(value1, value2) {
         else if (value1 > value2)
             return obj = {
                 status: "failed",
-                reason: "Min value is greater than max!"
+                reason: "min value is greater than max!"
             }
         else
             return obj = {

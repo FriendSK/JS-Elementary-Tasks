@@ -1,22 +1,28 @@
-function validationDataForFibo(value) {
+function validationDataForFiboByLength(value) {
 
-    if (value && value > 0)
+    if (value && value > 0 && value < 22)
         return 0;
 
-    else if (!value)
-        return obj = {
-            status: "failed",
-            reason: "you have entered a non numeric or zero value!"
-        }
-    else
-        return obj = {
-            status: "failed",
-            reason: "you have entered a negative value!"
-        };
+    else {
+        if (!value)
+            return obj = {
+                status: "failed",
+                reason: "you have entered a non numeric or zero value!"
+            }
+        if (value > 21)
+            return obj = {
+                status: "failed",
+                reason: "too large to calculate!"
+            }
+        else
+            return obj = {
+                status: "failed",
+                reason: "you have entered a negative value!"
+            };
+    }
 };
 
-function validationDataForFibo2(value1, value2) {
-
+function validationDataForFiboByRange(value1, value2) {
     if (value1 && value2 && value1 > 0 && value2 > 0 && value1 < value2) {
         return 0;
     } else {

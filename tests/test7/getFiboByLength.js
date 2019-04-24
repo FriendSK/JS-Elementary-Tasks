@@ -1,5 +1,5 @@
 function getFiboByLength(context) {
-    let len = transformIntData(context);
+    let len = +context;
     let getNum = 0;
     let arr = [0, 1];
     let res = [];

@@ -6,7 +6,7 @@ jsElementaryTasks.task7 = function (event, context) {
         let arr = [0, 1];
         let res = [];
 
-        if (!validationDataForFibo(len)) {
+        if (!validationDataForFiboByLength(len)) {
 
             for (let i = 2; getNum.toString().length < len + 1; i++) {
 
@@ -28,7 +28,7 @@ jsElementaryTasks.task7 = function (event, context) {
         let arr = [0, 1];
         let res = [];
 
-        if (!validationDataForFibo2(context.min, context.max)) {
+        if (!validationDataForFiboByRange(+context.min, +context.max)) {
 
             for (let i = 2; getNum < max; i++) {
 
