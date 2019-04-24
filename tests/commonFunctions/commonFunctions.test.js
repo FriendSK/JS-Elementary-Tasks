@@ -24,23 +24,16 @@ describe("transformIntData", function () {
     makeTest('3.4');
 });
 
+describe("isTriangle", function () {
 
+    function makeTest(x, y, z) {
 
+        it(`validates whether  a triangle with such sides is exist or not and  expected to be a "true" if so.`,
+            function () {
+                assert.equal((isTriangle(x, y, z)), true);
+            });
+    }
+    makeTest(4, 2, 4);
+});
 
-// describe("transformIntData", function () {
-
-//     function makeTest(x) {
-
-//         it("During validation " + arr[i] + " is converting intData into a number and the result is: 'number'",
-//             function () {
-//                 assert.equal(typeof (transformIntData(arr[i])), 'number');
-//             });
-//     }
-
-//     let arr = [0, -3, 4.3, 5.7888, '3b', NaN, 'g', false, true, null, undefined]
-
-//     for (var i = 0; i < arr.length - 1; i++) {
-//         makeTest(arr[i]);
-//     }
-// });
 

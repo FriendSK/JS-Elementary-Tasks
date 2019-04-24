@@ -32,13 +32,19 @@ addTriangle = () => {
     obj.b = +b;
     obj.c = +c;
 
-    if (!isNaN(a) && !isNaN(b) && !isNaN(c) && a > 0 && b > 0 && c > 0) {
-
-        input[7].value = '';
-        input[8].value = '';
-        input[9].value = '';
-        input[10].value = '';
-        return triangles.push(obj);
+    if (validationDataForTriangles(a, b, c)) {
+        if (isTriangle(a, b, c)) {
+            output[2].innerHTML = `
+            status: "failed",
+            reason: "with such sides a triangle  cannot exist!"`
+        } else {
+            input[7].value = '';
+            input[8].value = '';
+            input[9].value = '';
+            input[10].value = '';
+            output[2].innerHTML = '';
+            return triangles.push(obj);
+        };
     } else
         output[2].innerHTML = `
             status: "failed",

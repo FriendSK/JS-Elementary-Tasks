@@ -113,3 +113,7 @@ function validationDataForBoard(value1, value2) {
             reason: "enter only positive numbers and any symbol!"
         };
 };
+
+function validationDataForTriangles(a, b, c) {
+    return (!isNaN(a) && !isNaN(b) && !isNaN(c) && a > 0 && b > 0 && c > 0);
+};
