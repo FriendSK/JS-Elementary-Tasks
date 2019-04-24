@@ -5,7 +5,7 @@ jsElementaryTasks.task6 = function (row, min) {
         let resultArr = [];
         let len = transformFloatData(row);     // parseFloat incoming Data
         let square = transformFloatData(min);    // parseFloat incoming Data
-        let sqrt = +Math.sqrt(square).toFixed(0);  //calculating square root
+        let sqrt = +Math.ceil(Math.sqrt(square));  //calculating square root and rounding
 
         if (!validationDataForSequence(len, sqrt)) {  //validation of the incoming data
 
