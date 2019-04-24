@@ -37,3 +37,15 @@ describe("validationDataForTriangles", function () {
     }
     makeTest(4, 2, 4);
 });
+
+
+describe("getSquareOfTriangle", function () {
+
+
+    it(`It calculates square of triangle according to Herons formula  and returns  it  `,
+        function () {
+            let data = [['abc', 4, 2, 4]]
+
+            assert.equal(getSquareOfTriangle(data).toString(), 'abc,3.87');
+        });
+});
