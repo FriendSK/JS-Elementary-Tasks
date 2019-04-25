@@ -79,11 +79,8 @@ runTask6 = () => {
     output[5].innerHTML = jsElementaryTasks.task6(rowLength, minSquare);
 };
 
-runTask7 = () => {
-    let fibo = document.querySelector('#fibo');
-    fibo.onclick = function (event) {
-        return event;
-    };
+runTask7 = (event) => {
+
     let minValue = input[16].value.trim();
     let maxValue = input[17].value.trim();
     let lengthValue = input[18].value.trim();

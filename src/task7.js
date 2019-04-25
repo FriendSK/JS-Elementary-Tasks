@@ -45,7 +45,7 @@ jsElementaryTasks.task7 = function (event, context) {
     function getAnswerChoise(event) {
 
         if (event.target.getAttribute('data') === '2')  // get the choise of calculations depending on 
-                                                        // the  pressed button
+                                                         // the  pressed button
             return getFiboByLength(context);
 
         else return getFiboByRange(context);
